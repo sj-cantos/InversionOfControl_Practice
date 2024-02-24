@@ -23,6 +23,8 @@ public class FirstprojectApplication implements CommandLineRunner{
 	}
 	@Override
 	public void run(final String... args) {
+		final Person person = new Person("shan",20,"Cavite");
+		log.info(String.format("My name is %s %s years old from %s .", person.getName(), person.getAge(), person.getAddress()));
 		log.info(colourPrinter.print());
 	}
 
