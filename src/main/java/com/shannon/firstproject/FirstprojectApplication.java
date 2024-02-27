@@ -13,19 +13,24 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @Log
 public class FirstprojectApplication implements CommandLineRunner{
 
-	private ColourPrinter colourPrinter;
+//	private ColourPrinter colourPrinter;
+	private Person person;
 
-	public FirstprojectApplication(ColourPrinter colourPrinter){
-		this.colourPrinter = colourPrinter;
+	public FirstprojectApplication(Person person){
+		this.person = person;
 	}
+
+//	public FirstprojectApplication(ColourPrinter colourPrinter){
+//		this.colourPrinter = colourPrinter;
+//	}
 	public static void main(String[] args) {
 		SpringApplication.run(FirstprojectApplication.class, args);
 	}
 	@Override
 	public void run(final String... args) {
-		final Person person = new Person("shan",20,"Cavite");
+
 		log.info(String.format("My name is %s %s years old from %s .", person.getName(), person.getAge(), person.getAddress()));
-		log.info(colourPrinter.print());
+//		log.info(colourPrinter.print());
 	}
 
 }
